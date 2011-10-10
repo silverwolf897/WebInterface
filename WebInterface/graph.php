@@ -8,8 +8,8 @@
 	require 'scripts/itemInfo.php';
 	$isAdmin = $_SESSION['Admin'];
 	$queryAuctions=mysql_query("SELECT * FROM WA_Auctions");
-	$itemName = $_GET['name'];
-	$itemDamage = $_GET['damage'];
+	$itemName = mysql_real_escape_string(stripslashes($_GET['name']));
+	$itemDamage = mysql_real_escape_string(stripslashes($_GET['damage']));
 	$itemFullName = getItemName($itemName, $itemDamage);
 	if ($useMySQLiConomy){
 		$queryiConomy=mysql_query("SELECT * FROM $iConTableName WHERE username='$user'");
