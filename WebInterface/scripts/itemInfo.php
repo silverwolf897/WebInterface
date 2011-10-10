@@ -991,75 +991,75 @@
 		switch ($itemId)
 		{
 			case 1:
-				return "../images/Grid_Stone.png";
+				return "images/Grid_Stone.png";
 				break;
 			case 2:
-				return "../images/Grid_Grass.png";
+				return "images/Grid_Grass.png";
 				break;
 			case 3:
-				return "../images/Grid_Dirt.png";
+				return "images/Grid_Dirt.png";
 				break;	
 			case 4:
-				return "../images/Grid_Cobblestone.png";
+				return "images/Grid_Cobblestone.png";
 				break;
 			case 5:
-				return "../images/Grid_Wooden_Plank.png";
+				return "images/Grid_Wooden_Plank.png";
 				break;
 			case 6:
 				switch ($itemDamage)
 				{
 					case 1:
-						return "../images/Grid_Sapling_Spruce.png";
+						return "images/Grid_Sapling_Spruce.png";
 						break;
 					case 2:
-						return "../images/Grid_Sapling_Birch.png";
+						return "images/Grid_Sapling_Birch.png";
 						break;
 					default:
-						return "../images/Grid_Sapling.png";
+						return "images/Grid_Sapling.png";
 						break;	
 				}
 				break;
 			case 7:
-				return "../images/Grid_Bedrock.png";
+				return "images/Grid_Bedrock.png";
 				break;
 			case 8:
-				return "../images/Grid_Water.png";
+				return "images/Grid_Water.png";
 				break;
 			case 9:
-				return "../images/Grid_Water.png";
+				return "images/Grid_Water.png";
 				break;
 			case 10:
-				return "../images/Grid_Lava.png";
+				return "images/Grid_Lava.png";
 				break;
 			case 11:
-				return "../images/Grid_Lava.png";
+				return "images/Grid_Lava.png";
 				break;
 			case 12:
-				return "../images/Grid_Sand.png";
+				return "images/Grid_Sand.png";
 				break;
 			case 13:
-				return "../images/Grid_Gravel.png";
+				return "images/Grid_Gravel.png";
 				break;
 			case 14:
-				return "../images/Grid_Gold_%28Ore%29.png";
+				return "images/Grid_Gold_%28Ore%29.png";
 				break;
 			case 15:
-				return "../images/Grid_Iron_%28Ore%29.png";
+				return "images/Grid_Iron_%28Ore%29.png";
 				break;
 			case 16:
-				return "../images/Grid_Coal_%28Ore%29.png";
+				return "images/Grid_Coal_%28Ore%29.png";
 				break;
 			case 17:
 				switch ($itemDamage)
 				{
 					case 1:
-						return "../images/Grid_Wood_%28Pine%29.png";
+						return "images/Grid_Wood_%28Pine%29.png";
 						break;
 					case 2:
-						return "../images/Grid_Wood_%28Birch%29.png";
+						return "images/Grid_Wood_%28Birch%29.png";
 						break;
 					default:
-						return "../images/Grid_Wood.png";
+						return "images/Grid_Wood.png";
 						break;
 				}
 				break;
@@ -1067,80 +1067,80 @@
 				switch ($itemDamage)
 				{
 					case 1:
-						return "../images/Grid_Leaves_%28Pine%29.png";
+						return "images/Grid_Leaves_%28Pine%29.png";
 						break;
 					case 2:
-						return "../images/Grid_Leaves_%28Birch%29.png";
+						return "images/Grid_Leaves_%28Birch%29.png";
 						break;
 					default:
-						return "../images/Grid_Leaves.png";
+						return "images/Grid_Leaves.png";
 						break;
 				}
 				break;
 			case 19:
-				return "../images/Grid_Sponge.png";
+				return "images/Grid_Sponge.png";
 				break;
 			case 20:
-				return "../images/Grid_Glass.png";
+				return "images/Grid_Glass.png";
 				break;
 			case 21:
-				return "../images/Grid_Lapis_Lazuli_%28Ore%29.png";
+				return "images/Grid_Lapis_Lazuli_%28Ore%29.png";
 				break;
 			case 22:
-				return "../images/Grid_Lapis_Lazuli_%28Block%29.png";
+				return "images/Grid_Lapis_Lazuli_%28Block%29.png";
 				break;
 			case 23:
-				return "../images/Grid_Dispenser.png";
+				return "images/Grid_Dispenser.png";
 				break;
 			case 24:
-				return "../images/Grid_Sandstone.png";
+				return "images/Grid_Sandstone.png";
 				break;
 			case 25:
-				return "../images/Grid_Note_Block.png";
+				return "images/Grid_Note_Block.png";
 				break;
 			case 26:
-				return "../images/Grid_Bed.png";
+				return "images/Grid_Bed.png";
 				break;
 			case 27:
-				return "../images/Grid_Powered_Rail.png";
+				return "images/Grid_Powered_Rail.png";
 				break;
 			case 28:
-				return "../images/Grid_Detector_Rail.png";
+				return "images/Grid_Detector_Rail.png";
 				break;
 			case 29:
-				return "../images/Grid_Sticky_Piston.png";
+				return "images/Grid_Sticky_Piston.png";
 				break;
 			case 30:
-				return "../images/Grid_Cobweb.png";
+				return "images/Grid_Cobweb.png";
 				break;
 			case 31:
 				switch ($itemDamage)
 				{
 					case 1:
-						return "../images/Grid_Tall_Grass2.png";
+						return "images/Grid_Tall_Grass2.png";
 						break;
 					case 2:
-						return "../images/Grid_Tall_Grass3.png";
+						return "images/Grid_Tall_Grass3.png";
 						break;
 					default:
-						return "../images/Grid_Tall_Grass1.png";
+						return "images/Grid_Tall_Grass1.png";
 						break;
 				}
 				break;
 			case 32:
-				return "../images/Grid_Dead_Bush.png";
+				return "images/Grid_Dead_Bush.png";
 				break;
 			case 33:
-				return "../images/Grid_Piston.png";
+				return "images/Grid_Piston.png";
 				break;
 			case 34:
 				switch ($itemDamage)
 				{
 					case 1:
-						return "../images/Grid_Sticky_Piston.png";
+						return "images/Grid_Sticky_Piston.png";
 						break;
 					default:
-						return "../images/Grid_Piston.png";
+						return "images/Grid_Piston.png";
 						break;
 				}
 				break;
@@ -1148,75 +1148,75 @@
 				switch ($itemDamage)
 				{
 					case 1:
-						return "../images/Grid_Orange_Wool.png";
+						return "images/Grid_Orange_Wool.png";
 						break;
 					case 2:
-						return "../images/Grid_Magenta_Wool.png";
+						return "images/Grid_Magenta_Wool.png";
 						break;
 					case 3:
-						return "../images/Grid_Light_Blue_Wool.png";
+						return "images/Grid_Light_Blue_Wool.png";
 						break;
 					case 4:
-						return "../images/Grid_Yellow_Wool.png";
+						return "images/Grid_Yellow_Wool.png";
 						break;
 					case 5:
-						return "../images/Grid_Lime_Wool.png";
+						return "images/Grid_Lime_Wool.png";
 						break;
 					case 6:
-						return "../images/Grid_Pink_Wool.png";
+						return "images/Grid_Pink_Wool.png";
 						break;
 					case 7:
-						return "../images/Grid_Gray_Wool.png";
+						return "images/Grid_Gray_Wool.png";
 						break;
 					case 8:
-						return "../images/Grid_Light_Gray_Wool.png";
+						return "images/Grid_Light_Gray_Wool.png";
 						break;
 					case 9:
-						return "../images/Grid_Cyan_Wool.png";
+						return "images/Grid_Cyan_Wool.png";
 						break;
 					case 10:
-						return "../images/Grid_Purple_Wool.png";
+						return "images/Grid_Purple_Wool.png";
 						break;
 					case 11:
-						return "../images/Grid_Blue_Wool.png";
+						return "images/Grid_Blue_Wool.png";
 						break;
 					case 12:
-						return "../images/Grid_Brown_Wool.png";
+						return "images/Grid_Brown_Wool.png";
 						break;
 					case 13:
-						return "../images/Grid_Green_Wool.png";
+						return "images/Grid_Green_Wool.png";
 						break;
 					case 14:
-						return "../images/Grid_Red_Wool.png";
+						return "images/Grid_Red_Wool.png";
 						break;
 					case 15:
-						return "../images/Grid_Black_Wool.png";
+						return "images/Grid_Black_Wool.png";
 						break;
 					default:
-						return "../images/Grid_White_Wool.png";
+						return "images/Grid_White_Wool.png";
 						break;
 				}
 				break;
 			case 37:
-				return "../images/Grid_Dandelion.png";
+				return "images/Grid_Dandelion.png";
 				break;
 			case 38:
-				return "../images/Grid_Rose.png";
+				return "images/Grid_Rose.png";
 				break;
 			case 39:
-				return "../images/Crafting_square_Brown_Mushroom.png";
+				return "images/Crafting_square_Brown_Mushroom.png";
 				break;
 			case 40:
-				return "../images/Crafting_square_Red_Mushroom.png";
+				return "images/Crafting_square_Red_Mushroom.png";
 				break;
 			case 41:
-				return "../images/Grid_Gold_%28Block%29.png";
+				return "images/Grid_Gold_%28Block%29.png";
 				break;
 			case 42:
-				return "../images/Grid_Iron_%28Block%29.png";
+				return "images/Grid_Iron_%28Block%29.png";
 				break;
 			case 43:
-				return "../images/Grid_Double_Stone_Slab.png";
+				return "images/Grid_Double_Stone_Slab.png";
 				break;
 				switch ($itemDamage)
 				{
@@ -1238,195 +1238,195 @@
 				switch ($itemDamage)
 				{
 					case 1:
-						return "../images/Grid_Sandstone_Slab.png";
+						return "images/Grid_Sandstone_Slab.png";
 						break;
 					case 2:
-						return "../images/Grid_Wooden_Slab.png";
+						return "images/Grid_Wooden_Slab.png";
 						break;
 					case 3:
-						return "../images/Grid_Cobblestone_Slab.png";
+						return "images/Grid_Cobblestone_Slab.png";
 						break;
 					default:
-						return "../images/Grid_Stone_Slab.png";
+						return "images/Grid_Stone_Slab.png";
 						break;
 				}
 				break;
 			case 45:
-				return "../images/Grid_Brick_%28Block%29.png";
+				return "images/Grid_Brick_%28Block%29.png";
 				break;
 			case 46:
-				return "../images/Grid_TNT.png";
+				return "images/Grid_TNT.png";
 				break;
 			case 47:
-				return "../images/Grid_Bookshelf.png";
+				return "images/Grid_Bookshelf.png";
 				break;
 			case 48:
-				return "../images/Grid_Moss_Stone.png";
+				return "images/Grid_Moss_Stone.png";
 				break;
 			case 49:
-				return "../images/Grid_Obsidian.png";
+				return "images/Grid_Obsidian.png";
 				break;
 			case 50:
-				return "../images/Grid_Torch.png";
+				return "images/Grid_Torch.png";
 				break;
 			case 51:
-				return "../images/Grid_Fire.png";
+				return "images/Grid_Fire.png";
 				break;
 			case 52:
-				return "../images/Grid_Monster_Spawner.png";
+				return "images/Grid_Monster_Spawner.png";
 				break;
 			case 53:
-				return "../images/Grid_Wooden_Stairs.png";
+				return "images/Grid_Wooden_Stairs.png";
 				break;
 			case 54:
-				return "../images/Grid_Chest.png";
+				return "images/Grid_Chest.png";
 				break;
 			case 55:
-				return "../images/Grid_Redstone_%28Dust%29.png";
+				return "images/Grid_Redstone_%28Dust%29.png";
 				break;
 			case 56:
-				return "../images/Grid_Diamond_%28Ore%29.png";
+				return "images/Grid_Diamond_%28Ore%29.png";
 				break;
 			case 57:
-				return "../images/Grid_Diamond_%28Block%29.png";
+				return "images/Grid_Diamond_%28Block%29.png";
 				break;
 			case 58:
-				return "../images/Grid_Crafting_Table.png";
+				return "images/Grid_Crafting_Table.png";
 				break;
 			case 59:
 				return "Crops";
 				break;
 			case 60:
-				return "../images/Grid_Farmland.png"; // Soil
+				return "images/Grid_Farmland.png"; // Soil
 				break;
 			case 61:
-				return "../images/Grid_Furnace.png";
+				return "images/Grid_Furnace.png";
 				break;
 			case 62:
-				return "../images/Grid_Furnace.png";
+				return "images/Grid_Furnace.png";
 				break;
 			case 63:
-				return "../images/Grid_Sign.png";
+				return "images/Grid_Sign.png";
 				break;
 			case 64:
-				return "../images/Grid_Wooden_Door.png";
+				return "images/Grid_Wooden_Door.png";
 				break;
 			case 65:
-				return "../images/Grid_Ladders.png";
+				return "images/Grid_Ladders.png";
 				break;
 			case 66:
-				return "../images/Grid_Rails.png";
+				return "images/Grid_Rails.png";
 				break;
 			case 67:
-				return "../images/Grid_Cobblestone_Stairs.png";
+				return "images/Grid_Cobblestone_Stairs.png";
 				break;
 			case 68:
-				return "../images/Grid_Sign.png";
+				return "images/Grid_Sign.png";
 				break;
 			case 69:
-				return "../images/Grid_Lever.png";
+				return "images/Grid_Lever.png";
 				break;
 			case 70:
-				return "../images/Grid_Stone_Pressure_Plate.png";
+				return "images/Grid_Stone_Pressure_Plate.png";
 				break;
 			case 71:
-				return "../images/Grid_Iron_Door.png";
+				return "images/Grid_Iron_Door.png";
 				break;
 			case 72:
-				return "../images/Grid_Wooden_Pressure_Plate.png";
+				return "images/Grid_Wooden_Pressure_Plate.png";
 				break;
 			case 73:
-				return "../images/Grid_Redstone_%28Ore%29.png";
+				return "images/Grid_Redstone_%28Ore%29.png";
 				break;
 			case 74:
-				return "../images/Grid_Redstone_%28Ore%29.png";
+				return "images/Grid_Redstone_%28Ore%29.png";
 				break;
 			case 75:
-				return "../images/Grid_Redstone_%28Torch%29.png";
+				return "images/Grid_Redstone_%28Torch%29.png";
 				break;
 			case 76:
-				return "../images/Grid_Redstone_%28Torch%29.png";
+				return "images/Grid_Redstone_%28Torch%29.png";
 				break;
 			case 77:
-				return "../images/Grid_Stone_Button.png";
+				return "images/Grid_Stone_Button.png";
 				break;
 			case 78:
-				return "../images/Grid_Snow_%28Block%29.png";
+				return "images/Grid_Snow_%28Block%29.png";
 				break;
 			case 79:
-				return "../images/Grid_Ice.png";
+				return "images/Grid_Ice.png";
 				break;
 			case 80:
-				return "../images/Grid_Snow_%28Block%29.png";
+				return "images/Grid_Snow_%28Block%29.png";
 				break;
 			case 81:
-				return "../images/Grid_Cactus.png";
+				return "images/Grid_Cactus.png";
 				break;
 			case 82:
-				return "../images/Grid_Clay_%28Block%29.png";
+				return "images/Grid_Clay_%28Block%29.png";
 				break;
 			case 83:
-				return "../images/Grid_Sugar_Cane.png";
+				return "images/Grid_Sugar_Cane.png";
 				break;
 			case 84:
-				return "../images/Grid_Jukebox.png";
+				return "images/Grid_Jukebox.png";
 				break;
 			case 85:
-				return "../images/Grid_Fence.png";
+				return "images/Grid_Fence.png";
 				break;
 			case 86:
-				return "../images/Grid_Pumpkin.png";
+				return "images/Grid_Pumpkin.png";
 				break;	
 			case 87:
-				return "../images/Grid_Netherrack.png";
+				return "images/Grid_Netherrack.png";
 				break;
 			case 88:
-				return "../images/Grid_Soul_Sand.png";
+				return "images/Grid_Soul_Sand.png";
 				break;
 			case 89:
-				return "../images/Grid_Glowstone_%28Block%29.png";
+				return "images/Grid_Glowstone_%28Block%29.png";
 				break;
 			case 90:
-				return "../images/Grid_Portal.png";
+				return "images/Grid_Portal.png";
 				break;
 			case 91:
-				return "../images/a/ac/Grid_Jack-O-Lantern.png";
+				return "images/a/ac/Grid_Jack-O-Lantern.png";
 				break;
 			case 92:
-				return "../images/Grid_Cake.png";
+				return "images/Grid_Cake.png";
 				break;
 			case 93:
-				return "../images/Grid_Redstone_%28Repeater%29.png";
+				return "images/Grid_Redstone_%28Repeater%29.png";
 				break;
 			case 94:
-				return "../images/Grid_Redstone_%28Repeater%29.png";
+				return "images/Grid_Redstone_%28Repeater%29.png";
 				break;
 			case 95:
-				return "../images/Grid_Chest.png"; // Locked Chest
+				return "images/Grid_Chest.png"; // Locked Chest
 				break;
 			case 96:
-				return "../images/Grid_Trapdoor.png";
+				return "images/Grid_Trapdoor.png";
 				break;
 			case 97:
-				return "../images/Stone.png"; // Hidden Silverfish
+				return "images/Stone.png"; // Hidden Silverfish
 				break;
 			case 98:
-				return "../images/Grid_Stone_Brick.png";
+				return "images/Grid_Stone_Brick.png";
 				break;
 			case 99:
-				return "../images/Grid_Brown_Mushroom.png";
+				return "images/Grid_Brown_Mushroom.png";
 				break;
 			case 100:
-				return "../images/Grid_Red_Mushroom.png";
+				return "images/Grid_Red_Mushroom.png";
 				break;
 			case 101:
-				return "../images/Grid_Iron_Bars.png";
+				return "images/Grid_Iron_Bars.png";
 				break;
 			case 102:
-				return "../images/Grid_Glass_Pane.png";
+				return "images/Grid_Glass_Pane.png";
 				break;
 			case 103:
-				return "../images/Grid_Melon_%28Block%29.png";
+				return "images/Grid_Melon_%28Block%29.png";
 				break;
 			case 104:
 				return "Pumpkin Stem";
@@ -1435,419 +1435,419 @@
 				return "Melon Stem";
 				break;
 			case 106:
-				return "../images/Grid_Vines.png";
+				return "images/Grid_Vines.png";
 				break;
 			case 107:
-				return "../images/Grid_Fence_Gate.png";
+				return "images/Grid_Fence_Gate.png";
 				break;
 			case 108:
-				return "../images/Grid_Brick_Stairs.png";
+				return "images/Grid_Brick_Stairs.png";
 				break;
 			case 109:
-				return "../images/Grid_Stone_Brick_Stairs.png";
+				return "images/Grid_Stone_Brick_Stairs.png";
 				break;
 			case 256:
-				return "../images/Grid_Iron_Shovel.png";
+				return "images/Grid_Iron_Shovel.png";
 				break;
 			case 257:
-				return "../images/Grid_Iron_Pickaxe.png";
+				return "images/Grid_Iron_Pickaxe.png";
 				break;
 			case 258:
-				return "../images/Grid_Iron_Axe.png";
+				return "images/Grid_Iron_Axe.png";
 				break;
 			case 259:
-				return "../images/Grid_Flint_and_Steel.png";
+				return "images/Grid_Flint_and_Steel.png";
 				break;
 			case 260:
-				return "../images/Crafting_square_Red_Apple.png";
+				return "images/Crafting_square_Red_Apple.png";
 				break;
 			case 261:
-				return "../images/Grid_Bow.png";
+				return "images/Grid_Bow.png";
 				break;
 			case 262:
-				return "../images/Grid_Arrow.png";
+				return "images/Grid_Arrow.png";
 				break;
 			case 263:
 				switch ($itemDamage)
 				{
 					case 1:
-						return "../images/Grid_Charcoal_%28Item%29.png";
+						return "images/Grid_Charcoal_%28Item%29.png";
 						break;
 					default:
-						return "../images/Grid_Coal_%28Item%29.png";
+						return "images/Grid_Coal_%28Item%29.png";
 						break;
 				}
 				break;
 			case 264:
-				return "../images/Grid_Diamond_%28Gem%29.png";
+				return "images/Grid_Diamond_%28Gem%29.png";
 				break;
 			case 265:
-				return "../images/Grid_Iron_%28Ingot%29.png";
+				return "images/Grid_Iron_%28Ingot%29.png";
 				break;
 			case 266:
-				return "../images/Grid_Gold_%28Ingot%29.png";
+				return "images/Grid_Gold_%28Ingot%29.png";
 				break;
 			case 267:
-				return "../images/Grid_Iron_Sword.png";
+				return "images/Grid_Iron_Sword.png";
 				break;
 			case 268:
-				return "../images/Grid_Wooden_Sword.png";
+				return "images/Grid_Wooden_Sword.png";
 				break;
 			case 269:
-				return "../images/Grid_Wooden_Shovel.png";
+				return "images/Grid_Wooden_Shovel.png";
 				break;
 			case 270:
-				return "../images/Grid_Wooden_Pickaxe.png";
+				return "images/Grid_Wooden_Pickaxe.png";
 				break;
 			case 271:
-				return "../images/Grid_Wooden_Axe.png";
+				return "images/Grid_Wooden_Axe.png";
 				break;
 			case 272:
-				return "../images/Grid_Stone_Sword.png";
+				return "images/Grid_Stone_Sword.png";
 				break;
 			case 273:
-				return "../images/Grid_Stone_Shovel.png";
+				return "images/Grid_Stone_Shovel.png";
 				break;
 			case 274:
-				return "../images/Grid_Stone_Pickaxe.png";
+				return "images/Grid_Stone_Pickaxe.png";
 				break;
 			case 275:
-				return "../images/Grid_Stone_Axe.png";
+				return "images/Grid_Stone_Axe.png";
 				break;
 			case 276:
-				return "../images/Grid_Diamond_Sword.png";
+				return "images/Grid_Diamond_Sword.png";
 				break;
 			case 277:
-				return "../images/Grid_Diamond_Shovel.png";
+				return "images/Grid_Diamond_Shovel.png";
 				break;
 			case 278:
-				return "../images/Grid_Diamond_Pickaxe.png";
+				return "images/Grid_Diamond_Pickaxe.png";
 				break;
 			case 279:
-				return "../images/Grid_Diamond_Axe.png";
+				return "images/Grid_Diamond_Axe.png";
 				break;
 			case 280:
-				return "../images/Grid_Stick.png";
+				return "images/Grid_Stick.png";
 				break;
 			case 281:
-				return "../images/Grid_Bowl.png";
+				return "images/Grid_Bowl.png";
 				break;
 			case 282:
-				return "../images/Grid_Mushroom_Stew.png";
+				return "images/Grid_Mushroom_Stew.png";
 				break;
 			case 283:
-				return "../images/Grid_Gold_Sword.png";
+				return "images/Grid_Gold_Sword.png";
 				break;
 			case 284:
-				return "../images/Grid_Gold_Shovel.png";
+				return "images/Grid_Gold_Shovel.png";
 				break;
 			case 285:
-				return "../images/Grid_Gold_Pickaxe.png";
+				return "images/Grid_Gold_Pickaxe.png";
 				break;
 			case 286:
-				return "../images/Grid_Gold_Axe.png";
+				return "images/Grid_Gold_Axe.png";
 				break;
 			case 287:
-				return "../images/Grid_String.png";
+				return "images/Grid_String.png";
 				break;
 			case 288:
-				return "../images/Grid_Feather.png";
+				return "images/Grid_Feather.png";
 				break;
 			case 289:
-				return "../images/Grid_Gunpowder.png";
+				return "images/Grid_Gunpowder.png";
 				break;
 			case 290:
-				return "../images/Grid_Wooden_Hoe.png";
+				return "images/Grid_Wooden_Hoe.png";
 				break;
 			case 291:
-				return "../images/Grid_Stone_Hoe.png";
+				return "images/Grid_Stone_Hoe.png";
 				break;
 			case 292:
-				return "../images/Grid_Iron_Hoe.png";
+				return "images/Grid_Iron_Hoe.png";
 				break;
 			case 293:
-				return "../images/Grid_Diamond_Hoe.png";
+				return "images/Grid_Diamond_Hoe.png";
 				break;
 			case 294:
-				return "../images/Grid_Gold_Hoe.png";
+				return "images/Grid_Gold_Hoe.png";
 				break;
 			case 295:
-				return "../images/Grid_Seeds.png";
+				return "images/Grid_Seeds.png";
 				break;
 			case 296:
-				return "../images/Crafting_square_Wheat.png";
+				return "images/Crafting_square_Wheat.png";
 				break;
 			case 297:
-				return "../images/Crafting_square_Bread.png";
+				return "images/Crafting_square_Bread.png";
 				break;
 			case 298:
-				return "../images/Grid_Leather_Cap.png";
+				return "images/Grid_Leather_Cap.png";
 				break;
 			case 299:
-				return "../images/Grid_Leather_Tunic.png";
+				return "images/Grid_Leather_Tunic.png";
 				break;
 			case 300:
-				return "../images/Grid_Leather_Pants.png";
+				return "images/Grid_Leather_Pants.png";
 				break;
 			case 301:
-				return "../images/Grid_Leather_Boots.png";
+				return "images/Grid_Leather_Boots.png";
 				break;
 			case 302:
-				return "../images/Grid_Chain_Armor_Helmet.png";
+				return "images/Grid_Chain_Armor_Helmet.png";
 				break;
 			case 303:
-				return "../images/Grid_Chain_Armor_Chestplate.png";
+				return "images/Grid_Chain_Armor_Chestplate.png";
 				break;
 			case 304:
-				return "../images/Grid_Chain_Armor_Leggings.png";
+				return "images/Grid_Chain_Armor_Leggings.png";
 				break;
 			case 305:
-				return "../images/Grid_Chain_Armor_Boots.png";
+				return "images/Grid_Chain_Armor_Boots.png";
 				break;
 			case 306:
-				return "../images/Grid_Iron_Helmet.png";
+				return "images/Grid_Iron_Helmet.png";
 				break;
 			case 307:
-				return "../images/Grid_Iron_Chestplate.png";
+				return "images/Grid_Iron_Chestplate.png";
 				break;
 			case 308:
-				return "../images/Grid_Iron_Leggings.png";
+				return "images/Grid_Iron_Leggings.png";
 				break;
 			case 309:
-				return "../images/Grid_Iron_Boots.png";
+				return "images/Grid_Iron_Boots.png";
 				break;
 			case 310:
-				return "../images/Grid_Diamond_Helmet.png";
+				return "images/Grid_Diamond_Helmet.png";
 				break;
 			case 311:
-				return "../images/Grid_Diamond_Chestplate.png";
+				return "images/Grid_Diamond_Chestplate.png";
 				break;
 			case 312:
-				return "../images/Grid_Diamond_Leggings.png";
+				return "images/Grid_Diamond_Leggings.png";
 				break;
 			case 313:
-				return "../images/Grid_Diamond_Boots.png";
+				return "images/Grid_Diamond_Boots.png";
 				break;
 			case 314:
-				return "../images/Grid_Gold_Helmet.png";
+				return "images/Grid_Gold_Helmet.png";
 				break;
 			case 315:
-				return "../images/Grid_Gold_Chestplate.png";
+				return "images/Grid_Gold_Chestplate.png";
 				break;
 			case 316:
-				return "../images/Grid_Gold_Leggings.png";
+				return "images/Grid_Gold_Leggings.png";
 				break;
 			case 317:
-				return "../images/Grid_Gold_Boots.png";
+				return "images/Grid_Gold_Boots.png";
 				break;
 			case 318:
-				return "../images/Grid_Flint.png";
+				return "images/Grid_Flint.png";
 				break;
 			case 319:
-				return "../images/Crafting_square_Raw_Porkchop.png";
+				return "images/Crafting_square_Raw_Porkchop.png";
 				break;
 			case 320:
-				return "../images/Crafting_square_Cooked_Porkchop.png";
+				return "images/Crafting_square_Cooked_Porkchop.png";
 				break;
 			case 321:
-				return "../images/Grid_Painting.png";
+				return "images/Grid_Painting.png";
 				break;
 			case 322:
-				return "../images/Crafting_square_Golden_Apple.png";
+				return "images/Crafting_square_Golden_Apple.png";
 				break;
 			case 323:
-				return "../images/Grid_Sign.png";
+				return "images/Grid_Sign.png";
 				break;
 			case 324:
-				return "../images/Grid_Wooden_Door.png";
+				return "images/Grid_Wooden_Door.png";
 				break;
 			case 325:
-				return "../images/Grid_Bucket.png";
+				return "images/Grid_Bucket.png";
 				break;
 			case 326:
-				return "../images/Grid_Water_Bucket.png";
+				return "images/Grid_Water_Bucket.png";
 				break;
 			case 327:
-				return "../images/Grid_Lava_Bucket.png";
+				return "images/Grid_Lava_Bucket.png";
 				break;
 			case 328:
-				return "../images/Grid_Minecart.png";
+				return "images/Grid_Minecart.png";
 				break;
 			case 329:
-				return "../images/Grid_Saddle.png";
+				return "images/Grid_Saddle.png";
 				break;
 			case 330:
-				return "../images/Grid_Iron_Door.png";
+				return "images/Grid_Iron_Door.png";
 				break;
 			case 331:
-				return "../images/Grid_Redstone_%28Dust%29.png";
+				return "images/Grid_Redstone_%28Dust%29.png";
 				break;
 			case 332:
-				return "../images/Grid_Snowball.png";
+				return "images/Grid_Snowball.png";
 				break;
 			case 333:
-				return "../images/Grid_Boat.png";
+				return "images/Grid_Boat.png";
 				break;
 			case 334:
-				return "../images/Grid_Leather.png";
+				return "images/Grid_Leather.png";
 				break;
 			case 335:
-				return "../images/Crafting_square_Milk.png";
+				return "images/Crafting_square_Milk.png";
 				break;
 			case 336:
-				return "../images/Grid_Clay_%28Brick%29.png";
+				return "images/Grid_Clay_%28Brick%29.png";
 				break;
 			case 337:
-				return "../images/Grid_Clay_%28Item%29.png";
+				return "images/Grid_Clay_%28Item%29.png";
 				break;
 			case 338:
-				return "../images/Grid_Sugar_Cane.png";
+				return "images/Grid_Sugar_Cane.png";
 				break;
 			case 339:
-				return "../images/Grid_Paper.png";
+				return "images/Grid_Paper.png";
 				break;
 			case 340:
-				return "../images/Grid_Book.png";
+				return "images/Grid_Book.png";
 				break;
 			case 341:
-				return "../images/Grid_Slimeball.png";
+				return "images/Grid_Slimeball.png";
 				break;
 			case 342:
-				return "../images/Grid_Minecart_with_Chest.png";
+				return "images/Grid_Minecart_with_Chest.png";
 				break;
 			case 343:
-				return "../images/Grid_Minecart_with_Furnace.png";
+				return "images/Grid_Minecart_with_Furnace.png";
 				break;
 			case 344:
-				return "../images/Crafting_square_Egg.png";
+				return "images/Crafting_square_Egg.png";
 				break;
 			case 345:
-				return "../images/Grid_Compass.png";
+				return "images/Grid_Compass.png";
 				break;
 			case 346:
-				return "../images/Grid_Fishing_Rod.png";
+				return "images/Grid_Fishing_Rod.png";
 				break;
 			case 347:
-				return "../images/Grid_Clock.png";
+				return "images/Grid_Clock.png";
 				break;
 			case 348:
-				return "../images/Grid_Glowstone_%28Dust%29.png";
+				return "images/Grid_Glowstone_%28Dust%29.png";
 				break;
 			case 349:
-				return "../images/Crafting_square_Raw_Fish.png";
+				return "images/Crafting_square_Raw_Fish.png";
 				break;
 			case 350:
-				return "../images/Crafting_square_Cooked_Fish.png";
+				return "images/Crafting_square_Cooked_Fish.png";
 				break;
 			case 351:
 				switch ($itemDamage)
 				{
 					case 1:
-						return "../images/Grid_Rose_Red.png";
+						return "images/Grid_Rose_Red.png";
 						break;
 					case 2:
-						return "../images/Grid_Cactus_Green.png";
+						return "images/Grid_Cactus_Green.png";
 						break;
 					case 3:
-						return "../images/Grid_Cocoa_Beans.png";
+						return "images/Grid_Cocoa_Beans.png";
 						break;
 					case 4:
-						return "../images/Grid_Lapis_Lazuli_%28Dye%29.png";
+						return "images/Grid_Lapis_Lazuli_%28Dye%29.png";
 						break;
 					case 5:
-						return "../images/Grid_Purple_Dye.png";
+						return "images/Grid_Purple_Dye.png";
 						break;
 					case 6:
-						return "../images/Grid_Cyan_Dye.png";
+						return "images/Grid_Cyan_Dye.png";
 						break;
 					case 7:
-						return "../images/Grid_Light_Gray_Dye.png";
+						return "images/Grid_Light_Gray_Dye.png";
 						break;
 					case 8:
-						return "../images/Grid_Gray_Dye.png";
+						return "images/Grid_Gray_Dye.png";
 						break;
 					case 9:
-						return "../images/Grid_Pink_Dye.png";
+						return "images/Grid_Pink_Dye.png";
 						break;
 					case 10:
-						return "../images/Grid_Lime_Dye.png";
+						return "images/Grid_Lime_Dye.png";
 						break;
 					case 11:
-						return "../images/Grid_Dandelion_Yellow.png";
+						return "images/Grid_Dandelion_Yellow.png";
 						break;
 					case 12:
-						return "../images/Grid_Light_Blue_Dye.png";
+						return "images/Grid_Light_Blue_Dye.png";
 						break;
 					case 13:
-						return "../images/Grid_Magenta_Dye.png";
+						return "images/Grid_Magenta_Dye.png";
 						break;
 					case 14:
-						return "../images/Grid_Orange_Dye.png";
+						return "images/Grid_Orange_Dye.png";
 						break;
 					case 15:
-						return "../images/Grid_Bone_Meal.png";
+						return "images/Grid_Bone_Meal.png";
 						break;
 					default:
-						return "../images/Grid_Ink_Sac.png";
+						return "images/Grid_Ink_Sac.png";
 						break;
 				}
 				break;
 			case 352:
-				return "../images/Grid_Bone.png";
+				return "images/Grid_Bone.png";
 				break;
 			case 353:
-				return "../images/Grid_Sugar.png";
+				return "images/Grid_Sugar.png";
 				break;
 			case 354:
-				return "../images/Grid_Cake.png";
+				return "images/Grid_Cake.png";
 				break;
 			case 355:
-				return "../images/Grid_Bed.png";
+				return "images/Grid_Bed.png";
 				break;
 			case 356:
-				return "../images/Grid_Redstone_%28Repeater%29.png";
+				return "images/Grid_Redstone_%28Repeater%29.png";
 				break;
 			case 357:
-				return "../images/Grid_Cookie.png";
+				return "images/Grid_Cookie.png";
 				break;
 			case 358:
-				return "../images/Grid_Map_%28Item%29.png";
+				return "images/Grid_Map_%28Item%29.png";
 				break;
 			case 359:
-				return "../images/Grid_Shears.png";
+				return "images/Grid_Shears.png";
 				break;
 			case 360:
-				return "../images/Grid_Melon_%28Slice%29.png";
+				return "images/Grid_Melon_%28Slice%29.png";
 				break;
 			case 361:
-				return "../images/Grid_Pumpkin_Seeds.png";
+				return "images/Grid_Pumpkin_Seeds.png";
 				break;
 			case 362:
-				return "../images/Grid_Melon_Seeds.png";
+				return "images/Grid_Melon_Seeds.png";
 				break;
 			case 363:
-				return "../images/Grid_Raw_Beef.png";
+				return "images/Grid_Raw_Beef.png";
 				break;
 			case 364:
-				return "../images/Grid_Steak.png";
+				return "images/Grid_Steak.png";
 				break;
 			case 365:
-				return "../images/Grid_Raw_Chicken.png";
+				return "images/Grid_Raw_Chicken.png";
 				break;
 			case 366:
-				return "../images/Grid_Cooked_Chicken.png";
+				return "images/Grid_Cooked_Chicken.png";
 				break;
 			case 367:
-				return "../images/Grid_Rotten_Flesh.png";
+				return "images/Grid_Rotten_Flesh.png";
 				break;
 			case 368:
-				return "../images/Grid_Ender_Pearl.png";
+				return "images/Grid_Ender_Pearl.png";
 				break;
 			case 2256:
-				return "../images/Grid_Gold_Disc.png";
+				return "images/Grid_Gold_Disc.png";
 				break;
 			case 2257:
-				return "../images/Grid_Green_Disc.png";
+				return "images/Grid_Green_Disc.png";
 				break;
 			default:
 				return "air";
