@@ -190,7 +190,7 @@
 			$grade = "gradeX";
 		}
 		$row['DT_RowClass'] = $grade;
-		$row[] = "<img src=".getItemImage($aRow[ $aColumns[0] ], $aRow[ $aColumns[1] ])." alt=".$fullItemName."/><br/>".$fullItemName;
+		$row[] = "<a href='graph.php?name=".$aRow[ $aColumns[0] ]."&damage=".$aRow[ $aColumns[1] ]."'><img src=".getItemImage($aRow[ $aColumns[0] ], $aRow[ $aColumns[1] ])." alt=".$fullItemName."/><br/>".$fullItemName."</a>";
 		$row[] = "<img width='32px' src='http://minotar.net/avatar/".$aRow[ $aColumns[2] ]."' /><br/>".$aRow[ $aColumns[2] ];
 		$row[] = $aRow[ $aColumns[3] ];
 		$row[] = $aRow[ $aColumns[4] ];

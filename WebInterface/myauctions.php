@@ -130,7 +130,7 @@ while(list($id, $name, $damage, $player, $quantity)= mysql_fetch_row($queryItems
 	
 	?>
         <tr class="<?php echo $grade ?>">
-			<td><img src="<?php echo getItemImage($name, $damage) ?>" alt="<?php echo getItemName($name, $damage) ?>"/><br/><?php echo getItemName($name, $damage) ?></td>
+			<td><a href="graph.php?name=<?php echo $name."&damage=".$damage ?>"><img src="<?php echo getItemImage($name, $damage) ?>" alt="<?php echo getItemName($name, $damage) ?>"/><br/><?php echo getItemName($name, $damage) ?></a></td>
 			<td><?php echo $quantity ?></td>
 			<td class="center"><?php echo $price ?></td>
 			<td class="center"><?php echo $price*$quantity ?></td>

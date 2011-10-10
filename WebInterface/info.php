@@ -73,7 +73,7 @@
 			$fullName = getItemName($name, $damage);
 			?>
 			<tr class="gradeC">
-				<td><img src="<?php echo getItemImage($name, $damage) ?>" alt="<?php echo $fullName ?>"/><br/><?php echo $fullName ?></td>
+				<td><a href="graph.php?name=<?php echo $name."&damage=".$damage ?>"><img src="<?php echo getItemImage($name, $damage) ?>" alt="<?php echo getItemName($name, $damage) ?>"/><br/><?php echo getItemName($name, $damage) ?></a></td>
 				<td><?php echo $ref ?></td>
 				<td><?php echo round($price, 2) ?></td>
 				<td><a href="graph.php?name=<?php echo $name ?>&damage=<?php echo $damage ?>">View Graph</a></td>
