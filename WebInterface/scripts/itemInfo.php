@@ -1134,7 +1134,7 @@
 				return "../images/Grid_Piston.png";
 				break;
 			case 34:
-				switch (%itemDamage)
+				switch ($itemDamage)
 				{
 					case 1:
 						return "../images/Grid_Sticky_Piston.png";
