@@ -11,7 +11,7 @@
 	list($id, $itemName, $itemDamage, $itemOwner, $itemQuantity, $itemPrice)= mysql_fetch_row($queryAuctions);
 	$itemOwner = trim($itemOwner);
 	//echo $itemOwner.":".$user;
-	if ($itemOwner == $user){
+	if (strcasecmp($itemOwner,$user) == 0){
 		$queryPlayerItems =mysql_query("SELECT * FROM WA_Items WHERE player='$user'");
 		$foundItem = false;
 		$stackId = 0;
