@@ -7,10 +7,12 @@
 	$user = $_SESSION['User'];
 	require 'config.php';
 	require 'itemInfo.php';
+	if ($useTwitter == true){require_once 'twitter.class.php';}
 	$itemNameFull = explode(":", $_POST['Item']);
 	$sellName = $itemNameFull[0];
 	$sellDamage = $itemNameFull[1];
 	$sellPrice = round($_POST['Price'], 2);
+	$itemFullName = getItemName($sellName, $sellDamage);
 	if ($sellPrice > $maxSellPrice){ $sellPrice == $maxSellPrice; }
 	$sellQuantity = $_POST['Quantity'];
 	$maxStack = getItemMaxStack($sellName, $sellDamage);
@@ -42,6 +44,10 @@
 					else
 					{
 						$itemUpdate = mysql_query("UPDATE WA_Items SET quantity='$itemsLeft' WHERE id='$id'");
+					}
+					if ($useTwitter == true){
+						$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
+						$twitter->send('[WA] Auction Created: '.$sellQuantity.' x '.$itemFullName.' for '.$sellPrice.' each. #webauction');
 					}
 					header("Location: ../myauctions.php");
 				}else{

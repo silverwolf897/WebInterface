@@ -5,8 +5,8 @@
 	}
 	$user = $_SESSION['User'];
 	require 'config.php';
-	require 'config.php';
 	require 'itemInfo.php';
+	if ($useTwitter == true){require_once 'twitter.class.php';}
 	$playerMoney = 0;
 	if ($useMySQLiConomy){
 		$queryiConomy=mysql_query("SELECT * FROM $iConTableName WHERE username='$user'");
@@ -131,7 +131,12 @@
 				
 				$insertMarketPrice = mysql_query("INSERT INTO WA_MarketPrices (name, damage, time, marketprice, ref) VALUES ('$itemName', '$itemDamage', '$timeNow', '$newMarketPrice', '$marketCount')");
 			}
+			if ($useTwitter == true){
+				$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
+				$twitter->send('[WA] Item Bought: '.$buyQuantity.' x '.$itemFullName.' for '.$itemPrice.' each. #webauction');
+			}
 			header("Location: ../index.php?success=1");
+			 
 		}else {
 			header("Location: ../index.php?error=2");
 		}
