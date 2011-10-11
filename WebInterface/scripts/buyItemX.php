@@ -5,7 +5,6 @@
 	}
 	$user = $_SESSION['User'];
 	require 'config.php';
-	require 'config.php';
 	require 'itemInfo.php';
 	$playerMoney = 0;
 	if ($useMySQLiConomy){
