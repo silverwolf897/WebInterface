@@ -14,7 +14,7 @@
 	$sellPrice = round($_POST['Price'], 2);
 	$itemFullName = getItemName($sellName, $sellDamage);
 	if ($sellPrice > $maxSellPrice){ $sellPrice == $maxSellPrice; }
-	$sellQuantity = $_POST['Quantity'];
+	$sellQuantity = floor($_POST['Quantity']);
 	$maxStack = getItemMaxStack($sellName, $sellDamage);
 	
 	$queryItems=mysql_query("SELECT * FROM WA_Items WHERE player='$user' AND name='$sellName' AND damage='$sellDamage'");
@@ -28,7 +28,7 @@
 	}
 	else{
 		if (is_numeric($sellPrice)){	
-			if (is_numeric($sellQuantity)){
+			if ((is_numeric($sellQuantity))&&($sellQuantity > 1)){
 				$sellQuantity = round($sellQuantity);
 				if ($itemQuantity >= $sellQuantity)
 				{

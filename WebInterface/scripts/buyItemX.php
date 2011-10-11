@@ -22,10 +22,13 @@
 	}
 	
 	$itemId = $_POST['ID'];
-	$buyQuantity = $_POST['Quantity'];
+	$buyQuantity = floor($_POST['Quantity']);
 	if (!is_numeric($buyQuantity)) {
 		header("Location: ../index.php?error=3");
 	}
+	if ($buyQuantity < 1) {
+		header("Location: ../index.php?error=3");
+	}else{
 	$queryAuctions=mysql_query("SELECT * FROM WA_Auctions WHERE id='$itemId'");
 	list($id, $itemName, $itemDamage, $itemOwner, $itemQuantity, $itemPrice)= mysql_fetch_row($queryAuctions);
     $totalPrice = round($itemPrice*$buyQuantity, 2);
@@ -143,6 +146,7 @@
 	}else{
 		header("Location: ../index.php?error=1");
 		//echo "not enough money";
+	}
 	}
 	}
 ?>
