@@ -133,7 +133,7 @@
 			}
 			if ($useTwitter == true){
 				$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
-				$twitter->send('[WA] Item Bought: '.$buyQuantity.' x '.$itemFullName.' for '.$itemPrice.' each. #webauction');
+				$twitter->send('[WA] Item Bought: '.$buyQuantity.' x '.$itemFullName.' for '.$itemPrice.' each. At '.date("H:i:s").' #webauction');
 			}
 			header("Location: ../index.php?success=1");
 			 

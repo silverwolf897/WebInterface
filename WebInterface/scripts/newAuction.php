@@ -47,7 +47,7 @@
 					}
 					if ($useTwitter == true){
 						$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
-						$twitter->send('[WA] Auction Created: '.$sellQuantity.' x '.$itemFullName.' for '.$sellPrice.' each. #webauction');
+						$twitter->send('[WA] Auction Created: '.$sellQuantity.' x '.$itemFullName.' for '.$sellPrice.' each. At '.date("H:i:s").' #webauction');
 					}
 					header("Location: ../myauctions.php");
 				}else{
