@@ -3,7 +3,7 @@
 	if (!isset($_SESSION['User'])){
 		header("Location: login.php");
 	}
-	$user = $_SESSION['User'];
+	$user = trim($_SESSION['User']);
 	require 'config.php';
 	
 	$auctionId = mysql_real_escape_string(stripslashes($_GET['id']));
