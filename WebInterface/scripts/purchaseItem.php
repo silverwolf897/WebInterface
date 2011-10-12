@@ -9,7 +9,7 @@
     require_once '../classes/EconAccount.php';
 	if ($useTwitter == true){require_once 'twitter.class.php';}
 
-    $buyQuantity = 0;
+   
     $numberLeft = 0;
 
     $player = new EconAccount($user, $useMySQLiConomy, $iConTableName);
@@ -25,17 +25,11 @@
 
     if (is_numeric($_POST['Quantity']))
     {
-	    $buyQuantity = floor($_POST['Quantity']);
-    }else{
+	    $buyQuantity = mysql_real_escape_string(stripslashes(abs($_POST['Quantity'])));
+    }
+    else{
         $buyQuantity = $itemQuantity;
     }
-
-	if (!is_numeric($buyQuantity)) {
-		header("Location: ../index.php?error=3");
-	}
-	if ($buyQuantity < 1) {
-		header("Location: ../index.php?error=3");
-	}
 
     $totalPrice = round($itemPrice*$buyQuantity, 2);
 	$numberLeft = $itemQuantity-$buyQuantity;
