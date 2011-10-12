@@ -206,13 +206,8 @@
 		}else{
 			$quan = $aRow[ $aColumns[3] ];
 		}
-		for ($i = 1; $i <= $quan; $i++)
-		{ 
-			$options = $options."<option value='".$i."'>".$i."</option>"; 
-		}
-		$row[] = "<form action='scripts/buyItemX.php' method='post'><select name='Quantity' class='select'>".$options."</select><input type='hidden' name='ID' value='".$aRow[ $aColumns[5] ]."' /><input type='submit' value='Buy' class='button' /></form>";
-		$row[] = "<a class='button' href='scripts/buyItem.php?id=".$aRow[ $aColumns[5] ]."'>Buy</a>";
-		//if ($isAdmin == "true"){ 
+		$row[] = "<form action='scripts/purchaseItem.php' method='post'><input type='text' name='Quantity'><input type='hidden' name='ID' value='".$aRow[ $aColumns[5] ]."' /><input type='submit' value='Buy' class='button' /></form>";
+		//if ($isAdmin == "true"){
 			//$row[] = "<td><a class='button' href='scripts/cancelAuctionAdmin.php?id=".$aRow[ $aColumns[5] ]."'>Cancel</a></td>";
 		//}
 		$output['aaData'][] = $row;

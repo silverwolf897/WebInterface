@@ -81,8 +81,7 @@ if(isset($_GET['success'])) {
             <th>Price (Each)</th>
 			<th>Price (Total)</th>	
 			<th>% of Market Price</th>
-			<th>Buy X</th>
-			<th>Buy Stack</th>
+			<th>Buy (leave blank to purchase all)</th>
 		</tr>
 	</thead>
 	<tbody>
