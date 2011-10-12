@@ -28,7 +28,7 @@
 	}
 	else{
 		if (is_numeric($sellPrice)){	
-			if ((is_numeric($sellQuantity))&&($sellQuantity > 1)){
+			if ((is_numeric($sellQuantity))&&($sellQuantity > 0)){
 				$sellQuantity = round($sellQuantity);
 				if ($itemQuantity >= $sellQuantity)
 				{
