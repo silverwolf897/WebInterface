@@ -8,7 +8,8 @@
 	require 'scripts/itemInfo.php';
 	require 'scripts/updateTables.php';
 	$isAdmin = $_SESSION['Admin'];
-	
+	$canBuy = $_SESSION['canBuy'];
+	echo $canBuy;
 	$queryAuctions=mysql_query("SELECT * FROM WA_Auctions");
 	if ($useMySQLiConomy){
 		$queryiConomy=mysql_query("SELECT * FROM $iConTableName WHERE username='$user'");
@@ -61,6 +62,8 @@
 		echo "Something went wrong when buying that.";
 	}else if($_GET['error']==4){
 		echo "Not an admin.";
+	}else if($_GET['error']==5){
+		echo "You don't have permission to buy";
 	}}
 
 ?></p><p style="color:green"><?php 

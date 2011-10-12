@@ -4,6 +4,10 @@
 		header("Location: login.php");
 	}
 	$user = $_SESSION['User'];
+	$canBuy = $_SESSION['canBuy'];
+	if ($canBuy == false){
+		header("Location: ../index.php?error=5");
+	}
 	require 'config.php';
 	require 'itemInfo.php';
 	if ($useTwitter == true){require_once 'twitter.class.php';}

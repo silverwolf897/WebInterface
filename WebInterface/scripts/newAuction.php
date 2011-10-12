@@ -5,6 +5,10 @@
 	}
 	$isAdmin = $_SESSION['Admin'];
 	$user = $_SESSION['User'];
+	$canSell = $_SESSION['canSell'];
+	if ($canSell == false){
+		header("Location: ../myauctions.php?error=7");
+	}
 	require 'config.php';
 	require 'itemInfo.php';
 	if ($useTwitter == true){require_once 'twitter.class.php';}

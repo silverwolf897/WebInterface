@@ -3,6 +3,7 @@
     require 'config.php';
 	require 'itemInfo.php';
 	$isAdmin = $_SESSION['Admin'];
+	$canBuy = $_SESSION['canBuy'];
 	/*
 	 * Script:    DataTables server-side script for PHP and MySQL
 	 * Copyright: 2010 - Allan Jardine
@@ -224,8 +225,13 @@
 		{ 
 			$options = $options."<option value='".$i."'>".$i."</option>"; 
 		}
+		if ($canBuy == true){
 		$row[] = "<form action='scripts/buyItemX.php' method='post'><select name='Quantity' class='select'>".$options."</select><input type='hidden' name='ID' value='".$aRow[ $aColumns[5] ]."' /><input type='submit' value='Buy' class='button' /></form>";
 		$row[] = "<a class='button' href='scripts/buyItem.php?id=".$aRow[ $aColumns[5] ]."'>Buy</a>";
+		}else{
+		$row[] = "Can't Buy";
+		$row[] = "Can't Buy";
+		}
 		//if ($isAdmin == "true"){ 
 			//$row[] = "<td><a class='button' href='scripts/cancelAuctionAdmin.php?id=".$aRow[ $aColumns[5] ]."'>Cancel</a></td>";
 		//}
