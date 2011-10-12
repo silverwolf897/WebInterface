@@ -9,8 +9,6 @@
     require_once '../classes/EconAccount.php';
 	if ($useTwitter == true){require_once 'twitter.class.php';}
 
-	$playermoney = 0;
-    $ownermoney = 0;
     $buyQuantity = 0;
     $numberLeft = 0;
 
