@@ -87,6 +87,7 @@
 	 * on very large tables, and MySQL's regex functionality is very limited
 	 */
 	$sWhere = "";
+	if (isset($_GET['sSearch'])){
 	if ( $_GET['sSearch'] != "" )
 	{
 		$sWhere = "WHERE (";
@@ -97,10 +98,11 @@
 		$sWhere = substr_replace( $sWhere, "", -3 );
 		$sWhere .= ')';
 	}
-	
+	}
 	/* Individual column filtering */
 	for ( $i=0 ; $i<count($aColumns) ; $i++ )
 	{
+		if (isset($_GET['bSearchable_'.$i])){
 		if ( $_GET['bSearchable_'.$i] == "true" && $_GET['sSearch_'.$i] != '' )
 		{
 			if ( $sWhere == "" )
@@ -113,6 +115,7 @@
 			}
 			$sWhere .= $aColumns[$i]." LIKE '%".mysql_real_escape_string($_GET['sSearch_'.$i])."%' ";
 		}
+		}
 	}
 	
 	
@@ -120,6 +123,7 @@
 	 * SQL queries
 	 * Get data to display
 	 */
+	if (isset($sOrder)){
 	$sQuery = "
 		SELECT SQL_CALC_FOUND_ROWS ".str_replace(" , ", " ", implode(", ", $aColumns))."
 		FROM   $sTable
@@ -127,6 +131,15 @@
 		$sOrder
 		$sLimit
 	";
+	}else{
+	$sQuery = "
+		SELECT SQL_CALC_FOUND_ROWS ".str_replace(" , ", " ", implode(", ", $aColumns))."
+		FROM   $sTable
+		$sWhere
+		$sLimit
+	";
+	
+	}
 	$rResult = mysql_query( $sQuery, $gaSql['link'] ) or die(mysql_error());
 	
 	/* Data set length after filtering */
@@ -150,13 +163,14 @@
 	/*
 	 * Output
 	 */
+	if (isset($_GET['sEcho'])){
 	$output = array(
 		"sEcho" => intval($_GET['sEcho']),
 		"iTotalRecords" => $iTotal,
 		"iTotalDisplayRecords" => $iFilteredTotal,
 		"aaData" => array()
 	);
-	
+	}
 	while ( $aRow = mysql_fetch_array( $rResult ) )
 	{
 		$row = array();
