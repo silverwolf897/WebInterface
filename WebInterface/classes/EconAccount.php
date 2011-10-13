@@ -1,3 +1,4 @@
+<?
 class EconAccount
 {
     public $id;
@@ -21,4 +22,13 @@ class EconAccount
             $this->money = $row->money;
         }
     }
+	public function saveMoney($useMySQLiConomy, $iConTableName)
+    {
+        if ($useMySQLiConomy){
+            $query = mysql_query("UPDATE $iConTableName SET balance='$this->money' WHERE username='$this->name'");
+	    }else{
+            $query = mysql_query("UPDATE WA_Players SET money='$this->money' WHERE name='$this->name'");
+        }
+    }
 }
+?>

@@ -206,7 +206,7 @@
 		}
 		$row['DT_RowClass'] = $grade;
 		$row[] = "<a href='graph.php?name=".$aRow[ $aColumns[0] ]."&damage=".$aRow[ $aColumns[1] ]."'><img src=".getItemImage($aRow[ $aColumns[0] ], $aRow[ $aColumns[1] ])." alt=".$fullItemName."/><br/>".$fullItemName."</a>";
-		$row[] = "<img width='32px' src='http://minotar.net/avatar/".$aRow[ $aColumns[2] ]."' /><br/>".$aRow[ $aColumns[2] ];
+		$row[] = "<img width='32px' src='scripts/mcface.php?user=".$aRow[ $aColumns[2] ]."' /><br/>".$aRow[ $aColumns[2] ];
 		$row[] = $aRow[ $aColumns[3] ];
 		$row[] = $aRow[ $aColumns[4] ];
 		$row[] = (((double)$aRow[ $aColumns[3] ])*((double)$aRow[ $aColumns[4] ]));
@@ -222,9 +222,9 @@
 			$quan = $aRow[ $aColumns[3] ];
 		}
 		if ($canBuy == true){
-		$row[] = "<form action='scripts/purchaseItem.php' method='post'><input type='text' name='Quantity' class='input'><input type='hidden' name='ID' value='".$aRow[ $aColumns[5] ]."' /><input type='submit' value='Buy' class='button' /></form>";	
+			$row[] = "<form action='scripts/purchaseItem.php' method='post'><input type='text' name='Quantity' onKeyPress='return numbersonly(this, event)' class='input'><input type='hidden' name='ID' value='".$aRow[ $aColumns[5] ]."' /><input type='submit' value='Buy' class='button' /></form>";	
 		}else{
-		$row[] = "Can't Buy";
+			$row[] = "Can't Buy";
 		}
 		//if ($isAdmin == "true"){ 
 			//$row[] = "<td><a class='button' href='scripts/cancelAuctionAdmin.php?id=".$aRow[ $aColumns[5] ]."'>Cancel</a></td>";

@@ -20,6 +20,8 @@ $cssFile = "main"; //will be collecting a list of cool css files, but "main" is 
 
 /* Other config */
 
+$currencyPrefix = "$";
+$currencyPostfix = "";
 $useMySQLiConomy = false; //you you have iConomy data in another table in the same database?
 $sendPurchaceToMail = false; //if false send to my items, if true add to mail
 $iConTableName = "iConomy"; //"iConomy" is the default table name when using MySQL with iConomy
@@ -36,7 +38,7 @@ $accessTokenSecret = "";
 
 /* End config */
 
-
+$currencyPostfix = " ".$currencyPostfix;
 $marketTimeMin = $marketDaysMin * 86400;
 $link = mysql_connect($db_host,$db_user,$db_pass);
 if (!$link){die("Unable to connect to database".mysql_error());}
