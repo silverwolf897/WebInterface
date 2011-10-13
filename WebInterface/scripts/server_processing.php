@@ -211,26 +211,13 @@
 		$row[] = $aRow[ $aColumns[4] ];
 		$row[] = (((double)$aRow[ $aColumns[3] ])*((double)$aRow[ $aColumns[4] ]));
 		$row[] = $marketPercent;
-		$options = "";
-		if ($useBuyXMax == true){
-			if ($aRow[ $aColumns[3] ] > $buyXMax){
-				$quan = $buyXMax;
-			}else{
-				$quan = $aRow[ $aColumns[3] ];
-			}
-		}else{
-			$quan = $aRow[ $aColumns[3] ];
-		}
+		
 		if ($canBuy == true){
 			$row[] = "<form action='scripts/purchaseItem.php' method='post'><input type='text' name='Quantity' onKeyPress='return numbersonly(this, event)' class='input'><input type='hidden' name='ID' value='".$aRow[ $aColumns[5] ]."' /><input type='submit' value='Buy' class='button' /></form>";	
 		}else{
 			$row[] = "Can't Buy";
 		}
-		//if ($isAdmin == "true"){ 
-			//$row[] = "<td><a class='button' href='scripts/cancelAuctionAdmin.php?id=".$aRow[ $aColumns[5] ]."'>Cancel</a></td>";
-		//}
 		$output['aaData'][] = $row;
 	}
-	sizeOf($output);
 	echo json_encode( $output );
 ?>
