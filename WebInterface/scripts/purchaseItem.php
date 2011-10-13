@@ -23,9 +23,15 @@
 
 
 
-    if (is_numeric($_POST['Quantity']))
+    if (is_numeric($_POST['Quantity']) AND $_POST['Quantity'] != 0)
     {
 	    $buyQuantity = mysql_real_escape_string(stripslashes(round(abs($_POST['Quantity']))));
+    }
+    elseif ($_POST['Quantity'] == 0)
+    {
+        $_SESSION['error'] = "Please enter a quantity greater than 0";
+        header("Location: ../index.php");
+        return;
     }
     else{
         $buyQuantity = $itemQuantity;
