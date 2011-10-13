@@ -52,24 +52,19 @@
 			<br/>
         <h2>Current Auctions</h2>
         <p style="color:red"><?php 
-		if(isset($_GET['error'])) {
-	if($_GET['error']==1){
-		echo "Not enough money.";
-	}else if($_GET['error']==2){
-		echo "Cannot buy own items.";
-	}else if($_GET['error']==3){
-		echo "Something went wrong when buying that.";
-	}else if($_GET['error']==4){
-		echo "Not an admin.";
-	}}
+		if(isset($_SESSION['error']))
+        {
+            echo $_SESSION['error'];
+            unset($_SESSION['error']);
+	    }
 
-?></p><p style="color:green"><?php 
-if(isset($_GET['success'])) {
-	if($_GET['success']==1){
-		echo "Item bought.";
-	}
-}
-?></p>
+        ?></p><p style="color:green"><?php
+        if(isset($_SESSION['success']))
+        {
+            echo $_SESSION['success'];
+            unset($_SESSION['success']);
+        }
+        ?></p>
 			
 	  <div class="demo_jui">
 <table cellpadding="0" cellspacing="0" border="0" class="display" id="example">

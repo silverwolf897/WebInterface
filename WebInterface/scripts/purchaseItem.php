@@ -35,7 +35,8 @@
 	$numberLeft = $itemQuantity-$buyQuantity;
 
 	if ($numberLeft < 0){
-		header("Location: ../index.php?error=3");
+        $_SESSION['error'] = "You are attempting to purchase more than the maximum available";
+		header("Location: ../index.php");
 	}
 	else{
 
@@ -129,14 +130,16 @@
 				$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
 				$twitter->send('[WA] Item Bought: '.$buyQuantity.' x '.$itemFullName.' for '.$itemPrice.' each. At '.date("H:i:s").' #webauction');
 			}
-			header("Location: ../index.php?success=1");
+            $_SESSION['success'] = "You purchased $buyQuantity $itemFullName from $itemOwner for $$totalPrice";
+			header("Location: ../index.php");
 			 
 		}else {
-			header("Location: ../index.php?error=2");
+            $_SESSION['error'] = 'You cannnot buy your own items.';
+			header("Location: ../index.php");
 		}
 	}else{
-		header("Location: ../index.php?error=1");
-		//echo "not enough money";
+        $_SESSION['error'] = 'You do not have enough money.';
+        header("Location: ../index.php");
 	}
 	}
 
