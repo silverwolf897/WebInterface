@@ -25,7 +25,7 @@
 
     if (is_numeric($_POST['Quantity']))
     {
-	    $buyQuantity = mysql_real_escape_string(stripslashes(abs($_POST['Quantity'])));
+	    $buyQuantity = mysql_real_escape_string(stripslashes(round(abs($_POST['Quantity']))));
     }
     else{
         $buyQuantity = $itemQuantity;
