@@ -217,6 +217,9 @@
 		}else{
 			$row[] = "Can't Buy";
 		}
+		if ($isAdmin == true){ 
+			$row[] = "<td><a class='button' href='scripts/cancelAuctionAdmin.php?id=".$aRow[ $aColumns[5] ]."'>Cancel</a></td>";
+		}
 		$output['aaData'][] = $row;
 	}
 	echo json_encode( $output );

@@ -77,6 +77,9 @@
 			<th>Price (Total)</th>	
 			<th>% of Market Price</th>
 			<th>Buy (leave blank to buy all)</th>
+			<?php if ($isAdmin == true){ ?>
+				<th>Cancel</th>
+			<?php } ?>
 		</tr>
 	</thead>
 	<tbody>
