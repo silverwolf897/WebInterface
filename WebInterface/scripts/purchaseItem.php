@@ -4,6 +4,11 @@
 		header("Location: login.php");
 	}
 	$user = trim($_SESSION['User']);
+	$canBuy = $_SESSION['canBuy'];
+	if ($canBuy == false){
+		$_SESSION['error'] = 'You do not have permission to buy that.';
+		header("Location: ../index.php");
+	}
 	require 'config.php';
 	require 'itemInfo.php';
     require_once '../classes/EconAccount.php';

@@ -221,15 +221,9 @@
 		}else{
 			$quan = $aRow[ $aColumns[3] ];
 		}
-		for ($i = 1; $i <= $quan; $i++)
-		{ 
-			$options = $options."<option value='".$i."'>".$i."</option>"; 
-		}
 		if ($canBuy == true){
-		$row[] = "<form action='scripts/buyItemX.php' method='post'><select name='Quantity' class='select'>".$options."</select><input type='hidden' name='ID' value='".$aRow[ $aColumns[5] ]."' /><input type='submit' value='Buy' class='button' /></form>";
-		$row[] = "<a class='button' href='scripts/buyItem.php?id=".$aRow[ $aColumns[5] ]."'>Buy</a>";
+		$row[] = "<form action='scripts/purchaseItem.php' method='post'><input type='text' name='Quantity' class='input'><input type='hidden' name='ID' value='".$aRow[ $aColumns[5] ]."' /><input type='submit' value='Buy' class='button' /></form>";	
 		}else{
-		$row[] = "Can't Buy";
 		$row[] = "Can't Buy";
 		}
 		//if ($isAdmin == "true"){ 

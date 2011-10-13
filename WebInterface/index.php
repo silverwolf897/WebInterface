@@ -9,7 +9,6 @@
 	require 'scripts/updateTables.php';
 	$isAdmin = $_SESSION['Admin'];
 	$canBuy = $_SESSION['canBuy'];
-	echo $canBuy;
 	$queryAuctions=mysql_query("SELECT * FROM WA_Auctions");
 	if ($useMySQLiConomy){
 		$queryiConomy=mysql_query("SELECT * FROM $iConTableName WHERE username='$user'");
@@ -53,26 +52,19 @@
 			<br/>
         <h2>Current Auctions</h2>
         <p style="color:red"><?php 
-		if(isset($_GET['error'])) {
-	if($_GET['error']==1){
-		echo "Not enough money.";
-	}else if($_GET['error']==2){
-		echo "Cannot buy own items.";
-	}else if($_GET['error']==3){
-		echo "Something went wrong when buying that.";
-	}else if($_GET['error']==4){
-		echo "Not an admin.";
-	}else if($_GET['error']==5){
-		echo "You don't have permission to buy";
-	}}
+		if(isset($_SESSION['error']))
+        {
+            echo $_SESSION['error'];
+            unset($_SESSION['error']);
+	    }
 
-?></p><p style="color:green"><?php 
-if(isset($_GET['success'])) {
-	if($_GET['success']==1){
-		echo "Item bought.";
-	}
-}
-?></p>
+        ?></p><p style="color:green"><?php
+        if(isset($_SESSION['success']))
+        {
+            echo $_SESSION['success'];
+            unset($_SESSION['success']);
+        }
+        ?></p>
 			
 	  <div class="demo_jui">
 <table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
@@ -84,8 +76,7 @@ if(isset($_GET['success'])) {
             <th>Price (Each)</th>
 			<th>Price (Total)</th>	
 			<th>% of Market Price</th>
-			<th>Buy X</th>
-			<th>Buy Stack</th>
+			<th>Buy (leave blank to buy all)</th>
 		</tr>
 	</thead>
 	<tbody>
