@@ -32,7 +32,7 @@
     {
 	    $buyQuantity = mysql_real_escape_string(stripslashes(round(abs($_POST['Quantity']))));
     }
-    elseif ($_POST['Quantity'] == 0)
+    elseif ($_POST['Quantity'] < 0)
     {
         $_SESSION['error'] = "Please enter a quantity greater than 0";
         header("Location: ../index.php");
