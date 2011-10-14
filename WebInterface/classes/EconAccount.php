@@ -1,4 +1,4 @@
-<?
+<?php
 class EconAccount
 {
     public $id;
