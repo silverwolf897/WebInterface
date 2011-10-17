@@ -37,11 +37,21 @@
         <link rel="stylesheet" type="text/css" href="css/<?php echo $cssFile?>.css" />
 		<script type="text/javascript" language="javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
+		<script type="text/javascript" language="javascript" src="js/dataTables.Sort.js"></script>
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
 				oTable = $('#example').dataTable({
 					"bJQueryUI": true,
-					"sPaginationType": "full_numbers"
+					"sPaginationType": "full_numbers",
+					"aoColumns": [
+						{ "sType": "date-euro" },
+						null,
+						null,
+						null,
+						null,
+						null,
+						null
+					]
 				});
 				jTable = $('#example2').dataTable({
 					"bJQueryUI": true,
@@ -75,46 +85,7 @@
 	while(list($id, $name, $damage, $time, $quantity, $price, $seller, $buyer)= mysql_fetch_row($queryMyPurchases))
     { 
 		$marketPrice = getMarketPrice($name, $damage, $marketTimeMin);
-		$timeAgo = time() - $time;
-		#Made by Insidiea :D ----------------------------	
-		if ($timeAgo == 1) {
-			$val = "Second ago";
-			$div = 0;
-		}
-		if (($timeAgo > 1)&&($timeAgo < 60)) {
-			$val = "Seconds ago";
-			$div = 0;
-		}
-		if (($timeAgo >= 60)&&($timeAgo < 120)){
-			$val = "Minute ago";
-			$div = 60;
-		}
-		if (($timeAgo >= 120)&&($timeAgo < 3600)){
-			$val = "Minutes ago";
-			$div = 60;
-		}
-		if (($timeAgo >= 3600)&&($timeAgo < 7200)){
-			$val = "Hour ago";
-			$div = 3600;
-		}
-		if (($timeAgo >= 7200)&&($timeAgo < 86400)){
-			$val = "Hours ago";
-			$div = 3600;
-		}
-		if (($timeAgo >= 86400)&&($timeAgo < 172800)){
-			$val = "Day ago";
-			$div = 86400;
-		}
-		if ($timeAgo >= 172800){
-			$val = "Days ago";
-			$div = 86400;
-		}
-		$timeString = round($timeAgo/$div) ." ". $val;
-		#-------------------------------------------------
-		
-		
-		
-		
+		$timeFormat = date('d/m/Y H:i:s', $time);	
 		
 		if ($marketPrice > 0)
 		{
@@ -124,7 +95,7 @@
 		{
 			$marketPercent = "N/A";
 		}
-		if ($marketPercent == "N/A")
+		if ($marketPercent == "0")
 		{
 			$grade = "gradeU";
 		}
@@ -143,7 +114,7 @@
 	?>
     	
         <tr class="<?php echo $grade ?>">
-			<td><?php echo $timeString ?></td>
+			<td><?php echo $timeFormat ?></td>
 			<td><a href="graph.php?name=<?php echo $name."&damage=".$damage ?>"><img src="<?php echo getItemImage($name, $damage) ?>" alt="<?php echo getItemName($name, $damage) ?>"/><br/><?php echo getItemName($name, $damage) ?></a></td>
 			<td><img width="32px" src="scripts/mcface.php?user=<?php echo $seller ?>" /><br/><?php echo $seller ?></td>
           <td><?php echo $quantity ?></td>
@@ -177,42 +148,8 @@
 	while(list($id, $name, $damage, $time, $quantity, $price, $seller, $buyer)= mysql_fetch_row($queryMySales))
     { 
 		$marketPrice = getMarketPrice($name, $damage, $marketTimeMin);
-		$timeAgo = time() - $time;
-		#Made by Insidiea :D ----------------------------	
-		if ($timeAgo == 1) {
-			$val = "Second ago";
-			$div = 0;
-		}
-		if (($timeAgo > 1)&&($timeAgo < 60)) {
-			$val = "Seconds ago";
-			$div = 0;
-		}
-		if (($timeAgo >= 60)&&($timeAgo < 120)){
-			$val = "Minute ago";
-			$div = 60;
-		}
-		if (($timeAgo >= 120)&&($timeAgo < 3600)){
-			$val = "Minutes ago";
-			$div = 60;
-		}
-		if (($timeAgo >= 3600)&&($timeAgo < 7200)){
-			$val = "Hour ago";
-			$div = 3600;
-		}
-		if (($timeAgo >= 7200)&&($timeAgo < 86400)){
-			$val = "Hours ago";
-			$div = 3600;
-		}
-		if (($timeAgo >= 86400)&&($timeAgo < 172800)){
-			$val = "Day ago";
-			$div = 86400;
-		}
-		if ($timeAgo >= 172800){
-			$val = "Days ago";
-			$div = 86400;
-		}
-		$timeString = round($timeAgo/$div) ." ". $val;
-		#-------------------------------------------------
+		$timeFormat = date('d/m/Y H:i:s', $time);
+		
 		$marketPrice = getMarketPrice($name, $damage, $marketTimeMin);
 		if ($marketPrice > 0)
 		{
@@ -222,7 +159,7 @@
 		{
 			$marketPercent = "N/A";
 		}
-		if ($marketPercent == "N/A")
+		if ($marketPercent == "0")
 		{
 			$grade = "gradeU";
 		}
@@ -241,7 +178,7 @@
 	?>
     	
         <tr class="<?php echo $grade ?>">
-			<td><?php echo $timeString ?></td>
+			<td><?php echo $timeFormat ?></td>
 			<td><a href="graph.php?name=<?php echo $name."&damage=".$damage ?>"><img src="<?php echo getItemImage($name, $damage) ?>" alt="<?php echo getItemName($name, $damage) ?>"/><br/><?php echo getItemName($name, $damage) ?></a></td>
 			<td><img width="32px" src="scripts/mcface.php?user=<?php echo $buyer ?>" /><br/><?php echo $buyer ?></td>
           <td><?php echo $quantity ?></td>
