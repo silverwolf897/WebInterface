@@ -139,7 +139,7 @@
 			}
 			if ($useTwitter == true){
 				$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
-				$twitter->send('[WA] Item Bought: '.$buyQuantity.' x '.$itemFullName.' for '.$currencyPrefix.$itemPrice.$currencyPostfix.' each. At '.date("H:i:s").' #webauction');
+				$twitter->send('[WA] Item Bought: '.$user.' bought '.$buyQuantity.' x '.$itemFullName.' for '.$currencyPrefix.$itemPrice.$currencyPostfix.' each from '.$itemOwner.'. At '.date("H:i:s").'. '.$shortLinkToAuction.' #webauction');
 			}
             $_SESSION['success'] = "You purchased $buyQuantity $itemFullName from $itemOwner for ".$currencyPrefix.$totalPrice.$currencyPostfix.".";
 			header("Location: ../index.php");
