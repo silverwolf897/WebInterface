@@ -39,6 +39,7 @@
 				oTable = $('#example').dataTable({
 					"bProcessing": true,
 					"bJQueryUI": true,
+					"bStateSave": true,
 					"sPaginationType": "full_numbers",
 					"sAjaxSource": "scripts/server_processing.php"
 					
