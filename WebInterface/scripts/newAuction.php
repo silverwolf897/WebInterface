@@ -5,6 +5,10 @@
 	}
 	$isAdmin = $_SESSION['Admin'];
 	$user = $_SESSION['User'];
+	$canSell = $_SESSION['canSell'];
+	if ($canSell == false){
+		header("Location: ../myauctions.php?error=7");
+	}
 	require 'config.php';
 	require 'itemInfo.php';
 	if ($useTwitter == true){require_once 'twitter.class.php';}
@@ -47,7 +51,7 @@
 					}
 					if ($useTwitter == true){
 						$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
-						$twitter->send('[WA] Auction Created: '.$sellQuantity.' x '.$itemFullName.' for '.$sellPrice.' each. At '.date("H:i:s").' #webauction');
+						$twitter->send('[WA] Auction Created: '.$user.' is selling '.$sellQuantity.' x '.$itemFullName.' for '.$currencyPrefix.$sellPrice.$currencyPostfix.' each. At '.date("H:i:s").'. '.$shortLinkToAuction.' #webauction');
 					}
 					header("Location: ../myauctions.php");
 				}else{

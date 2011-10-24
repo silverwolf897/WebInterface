@@ -11,18 +11,17 @@
 	$playerRow = mysql_fetch_row($result);
 	if ($count==1){
 		$hour = time() + 3600;
-		$_SESSION['User'] = $playerRow[1];
-		$queryAdmins = mysql_query("SELECT * FROM WA_WebAdmins WHERE name='$Username'");
-		$countAdmins = mysql_num_rows($queryAdmins);
-		if ($countAdmins==1){
-			$_SESSION['Admin'] = "true";
-		}else{
-			$_SESSION['Admin'] = "false";
-		}
+		$_SESSION['User'] = $playerRow[1];		
+		if ($playerRow[6] == 1){$_SESSION['Admin'] = true;}else{$_SESSION['Admin'] = false;}
+		if ($playerRow[4] == 1){$_SESSION['canBuy'] = true;}else{$_SESSION['canBuy'] = false;}
+		if ($playerRow[5] == 1){$_SESSION['canSell'] = true;}else{$_SESSION['canSell'] = false;}
 		header("Location: ../index.php");
 	}else{
 		$past = time() - 100;
 		unset($_SESSION['User']);
+		unset($_SESSION['canBuy']);
+		unset($_SESSION['canSell']);
+		unset($_SESSION['Admin']);
 		header("Location: ../login.php?error=1");
 	}
 	

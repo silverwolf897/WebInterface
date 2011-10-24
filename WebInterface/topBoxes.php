@@ -2,12 +2,12 @@
 		<table cellspacing="3px">
 		<tr>
 		<td>
-		<img width="64px" src="http://minotar.net/avatar/<?php echo $user ?>" />
+		<img width="64px" src="scripts/mcface.php?user=<?php echo $user ?>" />
 		</td>
 		<td>
         <p>Name: &nbsp;&nbsp;<?php echo $user?><?php if ($isAdmin == "true"){ echo " ADMIN"; } ?><br/>
 		<?php if ($useMySQLiConomy){ ?>
-		Money: &nbsp;$<?php echo $iConRow['2']?><br />
+		Money: &nbsp;<?php echo $currencyPrefix.$iConRow['2'].$currencyPostfix?><br />
 		<?php }else{ ?>
         Money: &nbsp;$<?php echo $playerRow['3']?><br />
 		<?php } ?>

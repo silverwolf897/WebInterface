@@ -8,7 +8,7 @@
 	require 'scripts/itemInfo.php';
 	require 'scripts/updateTables.php';
 	$isAdmin = $_SESSION['Admin'];
-	
+	$canBuy = $_SESSION['canBuy'];
 	$queryAuctions=mysql_query("SELECT * FROM WA_Auctions");
 	if ($useMySQLiConomy){
 		$queryiConomy=mysql_query("SELECT * FROM $iConTableName WHERE username='$user'");
@@ -39,6 +39,7 @@
 				oTable = $('#example').dataTable({
 					"bProcessing": true,
 					"bJQueryUI": true,
+					"bStateSave": true,
 					"sPaginationType": "full_numbers",
 					"sAjaxSource": "scripts/server_processing.php"
 					
@@ -77,6 +78,9 @@
 			<th>Price (Total)</th>	
 			<th>% of Market Price</th>
 			<th>Buy (leave blank to buy all)</th>
+			<?php if ($isAdmin == true){ ?>
+				<th>Cancel</th>
+			<?php } ?>
 		</tr>
 	</thead>
 	<tbody>

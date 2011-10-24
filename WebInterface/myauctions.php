@@ -4,6 +4,7 @@
 		header("Location: login.php");
 	}
 	$user = $_SESSION['User'];
+	$canSell = $_SESSION['canSell'];
 	require 'scripts/config.php';
 	require 'scripts/itemInfo.php';
 	$isAdmin = $_SESSION['Admin'];
@@ -62,10 +63,13 @@
 		echo "Quantity not a valid number.";
 	}else if($_GET['error']==6){
 		echo "Price not a valid number.";
+	}else if($_GET['error']==7){
+		echo "You don't have sell permissions.";
 	}
 	}
 
 ?></p>
+		<?php if($canSell == true){ ?>
 		<div id="new-auction-box">
 <h2>Create a new auction</h2>
 <form action="scripts/newAuction.php" method="post" name="auction">
@@ -85,6 +89,7 @@ while(list($id, $name, $damage, $player, $quantity)= mysql_fetch_row($queryItems
 <label>&nbsp;</label><input name="Submit" type="submit" class="button" />
 </form>
 </div>	
+	<?php } ?>
 <h2>My Auctions</h2>
 	  <div class="demo_jui">
 <table cellpadding="0" cellspacing="0" border="0" class="display" id="example">

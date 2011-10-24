@@ -3,6 +3,7 @@
     require 'config.php';
 	require 'itemInfo.php';
 	$isAdmin = $_SESSION['Admin'];
+	$canBuy = $_SESSION['canBuy'];
 	/*
 	 * Script:    DataTables server-side script for PHP and MySQL
 	 * Copyright: 2010 - Allan Jardine
@@ -205,27 +206,21 @@
 		}
 		$row['DT_RowClass'] = $grade;
 		$row[] = "<a href='graph.php?name=".$aRow[ $aColumns[0] ]."&damage=".$aRow[ $aColumns[1] ]."'><img src=".getItemImage($aRow[ $aColumns[0] ], $aRow[ $aColumns[1] ])." alt=".$fullItemName."/><br/>".$fullItemName."</a>";
-		$row[] = "<img width='32px' src='http://minotar.net/avatar/".$aRow[ $aColumns[2] ]."' /><br/>".$aRow[ $aColumns[2] ];
+		$row[] = "<img width='32px' src='scripts/mcface.php?user=".$aRow[ $aColumns[2] ]."' /><br/>".$aRow[ $aColumns[2] ];
 		$row[] = $aRow[ $aColumns[3] ];
 		$row[] = $aRow[ $aColumns[4] ];
 		$row[] = (((double)$aRow[ $aColumns[3] ])*((double)$aRow[ $aColumns[4] ]));
 		$row[] = $marketPercent;
-		$options = "";
-		if ($useBuyXMax == true){
-			if ($aRow[ $aColumns[3] ] > $buyXMax){
-				$quan = $buyXMax;
-			}else{
-				$quan = $aRow[ $aColumns[3] ];
-			}
+		
+		if ($canBuy == true){
+			$row[] = "<form action='scripts/purchaseItem.php' method='post'><input type='text' name='Quantity' onKeyPress='return numbersonly(this, event)' class='input'><input type='hidden' name='ID' value='".$aRow[ $aColumns[5] ]."' /><input type='submit' value='Buy' class='button' /></form>";	
 		}else{
-			$quan = $aRow[ $aColumns[3] ];
+			$row[] = "Can't Buy";
 		}
-		$row[] = "<form action='scripts/purchaseItem.php' method='post'><input type='text' name='Quantity'><input type='hidden' name='ID' value='".$aRow[ $aColumns[5] ]."' /><input type='submit' value='Buy' class='button' /></form>";
-		//if ($isAdmin == "true"){
-			//$row[] = "<td><a class='button' href='scripts/cancelAuctionAdmin.php?id=".$aRow[ $aColumns[5] ]."'>Cancel</a></td>";
-		//}
+		if ($isAdmin == true){ 
+			$row[] = "<td><a class='button' href='scripts/cancelAuctionAdmin.php?id=".$aRow[ $aColumns[5] ]."'>Cancel</a></td>";
+		}
 		$output['aaData'][] = $row;
 	}
-	sizeOf($output);
 	echo json_encode( $output );
 ?>

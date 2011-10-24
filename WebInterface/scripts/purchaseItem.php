@@ -4,6 +4,11 @@
 		header("Location: login.php");
 	}
 	$user = trim($_SESSION['User']);
+	$canBuy = $_SESSION['canBuy'];
+	if ($canBuy == false){
+		$_SESSION['error'] = 'You do not have permission to buy that.';
+		header("Location: ../index.php");
+	}
 	require 'config.php';
 	require 'itemInfo.php';
     require_once '../classes/EconAccount.php';
@@ -14,7 +19,7 @@
 
     $player = new EconAccount($user, $useMySQLiConomy, $iConTableName);
 
-	
+
 	$itemId = $_POST['ID'];
     $queryAuctions=mysql_query("SELECT * FROM WA_Auctions WHERE id='$itemId'");
 	list($id, $itemName, $itemDamage, $itemOwner, $itemQuantity, $itemPrice)= mysql_fetch_row($queryAuctions);
@@ -27,7 +32,7 @@
     {
 	    $buyQuantity = mysql_real_escape_string(stripslashes(round(abs($_POST['Quantity']))));
     }
-    elseif ($_POST['Quantity'] == 0)
+    elseif ($_POST['Quantity'] < 0)
     {
         $_SESSION['error'] = "Please enter a quantity greater than 0";
         header("Location: ../index.php");
@@ -102,13 +107,13 @@
             }
 			$logPrice = mysql_query("INSERT INTO WA_SellPrice (name, damage, time, buyer, seller, quantity, price) VALUES ('$itemName', '$itemDamage', '$timeNow', '$user', '$itemOwner', '$buyQuantity', '$itemPrice')");
 			$base = isTrueDamage($itemName, $itemDamage);
-			
+
 			if ($base > 0){
 				$queryMarket=mysql_query("SELECT * FROM WA_MarketPrices WHERE name='$itemName' AND damage='0' ORDER BY id DESC");
-				
+
 			}else{
 				$queryMarket=mysql_query("SELECT * FROM WA_MarketPrices WHERE name='$itemName' AND damage='$itemDamage' ORDER BY id DESC");	
-				
+
 			}
 			$countMarket = mysql_num_rows($queryMarket);
 			if ($countMarket == 0){
@@ -125,20 +130,20 @@
 				$marketCount = $marketCount+$buyQuantity;
 			}
 			if ($base > 0){
-				
+
 				$newMarketPrice = ($newMarketPrice/($base - $itemDamage))*$base;
 				$insertMarketPrice = mysql_query("INSERT INTO WA_MarketPrices (name, damage, time, marketprice, ref) VALUES ('$itemName', '0', '$timeNow', '$newMarketPrice', '$marketCount')");
 			}else{
-				
+
 				$insertMarketPrice = mysql_query("INSERT INTO WA_MarketPrices (name, damage, time, marketprice, ref) VALUES ('$itemName', '$itemDamage', '$timeNow', '$newMarketPrice', '$marketCount')");
 			}
 			if ($useTwitter == true){
 				$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
-				$twitter->send('[WA] Item Bought: '.$buyQuantity.' x '.$itemFullName.' for '.$itemPrice.' each. At '.date("H:i:s").' #webauction');
+				$twitter->send('[WA] Item Bought: '.$user.' bought '.$buyQuantity.' x '.$itemFullName.' for '.$currencyPrefix.$itemPrice.$currencyPostfix.' each from '.$itemOwner.'. At '.date("H:i:s").'. '.$shortLinkToAuction.' #webauction');
 			}
-            $_SESSION['success'] = "You purchased $buyQuantity $itemFullName from $itemOwner for $$totalPrice";
+            $_SESSION['success'] = "You purchased $buyQuantity $itemFullName from $itemOwner for ".$currencyPrefix.$totalPrice.$currencyPostfix.".";
 			header("Location: ../index.php");
-			 
+
 		}else {
             $_SESSION['error'] = 'You cannnot buy your own items.';
 			header("Location: ../index.php");

@@ -1,12 +1,11 @@
 <?php
-
 class EconAccount
 {
     public $id;
     public $name;
     public $money;
 
-    public function __construct($user, $useMySQLiConomy, $iConTableName)
+    function __construct($user, $useMySQLiConomy, $iConTableName)
     {
 
        if ($useMySQLiConomy){
@@ -23,8 +22,7 @@ class EconAccount
             $this->money = $row->money;
         }
     }
-
-   public function saveMoney($useMySQLiConomy, $iConTableName)
+	public function saveMoney($useMySQLiConomy, $iConTableName)
     {
         if ($useMySQLiConomy){
             $query = mysql_query("UPDATE $iConTableName SET balance='$this->money' WHERE username='$this->name'");
@@ -33,5 +31,4 @@ class EconAccount
         }
     }
 }
-
 ?>
